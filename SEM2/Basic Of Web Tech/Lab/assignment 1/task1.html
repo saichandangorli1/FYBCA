@@ -4,53 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        padding-inline: 15px;
+      }
+      body {
+        background-color: #fff;
+        color: #000;
+        width: 100vw;
+        height: fit-content;
+        overflow-x: hidden;
+      }
+
+      nav {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav > ul {
+        display: flex;
+        margin-inline: 5px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      nav > ul li {
+        list-style: none;
+        padding: 11px;
+        padding-inline: 12px;
+      }
+      nav > ul li:nth-child(2) {
+        border: 1px solid black;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+      }
+      nav > ul li:nth-child(2):hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .in {
+        font-size: 20px;
+        width: 75%;
+      }
+      .introdiv,
+      .skilldiv,
+      .pjdiv {
+        border-bottom: 1px solid black;
+      }
+      .name {
+        color: #910094;
+      }
+
+      a {
+        text-decoration: none;
+        color: #2c2c2c;
+      }
+    </style>
   </head>
   <body>
     <!-- 1)Create a simple portfolio webpage that includes an introduction, skills, projects,
 and contact information. -->
 
-    <h1>Portfolio</h1>
-    <h2>Introduction</h2>
-    <p>
-      hi, I am Saichandan Gorli. Welcome to my portfoliot I'm a web developer
-      with a passion for creating clean, efficient, and user-friendly websites.I
-      specialize in front-end web development with experience in building
-      responsive websites. I am always eager to learn new technologies and
-      improve my skills
-    </p>
-    <h2>skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>C55</li>
-      <li>C</li>
-      <li>Javascript</li>
-      <li>React js</li>
-      <li>Node.js</li>
-      <li>Git GitHub</li>
-      <li>Responsive Design</li>
-    </ul>
+    <nav>
+      <h1 class="pt">Portfolio</h1>
+      <ul>
+        <li>Landing page</li>
+        <li>Projects</li>
+        <li>Tools</li>
+      </ul>
+    </nav>
+    <div class="introdiv">
+      <h2>Introduction</h2>
+      <p class="in">
+        hi, I am <span class="name">Saichandan Gorli.</span> Welcome to my
+        portfoliot I'm a web developer with a passion for creating clean,
+        efficient, and user-friendly websites.
+      </p>
+    </div>
+    <div class="skilldiv">
+      <h2>skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>C55</li>
+        <li>C</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>Node.js</li>
+        <li>Git GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+    <div class="pjdiv">
+      <h2>Projects</h2>
+      <h3>Project 1: <span class="name">Portfolio Website</span></h3>
+      <p>
+        Description: A personal portfolio website to showcase my skalls,
+        projects, and achievements.
+      </p>
+      <a href="#">View Project🐱‍👤</a>
+      <h3>Project 2: <span class="name">To-Do List App</span></h3>
+      <p>
+        Description: A to-do lat application budt with JavaScript to manage
+        tasks.
+      </p>
+      <a href="#">View Project🐱‍👤</a>
+    </div>
+    <div>
+      <h2>Contact Information</h2>
 
-    <h2>Projects</h2>
-    <h3>Project 1: Portfolio Website</h3>
-    <p>
-      Description: A personal portfolio website to showcase my skalls, projects,
-      and achievements.
-    </p>
-    <a href="#">View Project</a>
-    <h3>Project 2: To-Do List App</h3>
-    <p>
-      Description: A to-do lat application budt with JavaScript to manage tasks.
-    </p>
-    <a href="#">View Project</a>
-
-    <h2>Contact Information</h2>
-
-    <p>If you'd like to get in touch, you can reach me at</p>
-    <ul>
-      <li>Email: saichandan.gorli@mitwpu.edu.in</li>
-      <li>Phone: 7845745795</li>
-      <li>Linkedin : <a href="#">Saichandan Gorli.</a></li>
-      <li>GitHub : <a href="#">Saichandan Gorli.</a></li>
-    </ul>
+      <p>If you'd like to get in touch, you can reach me at 👇</p>
+      <ul>
+        <li>Email: saichandan.gorli@mitwpu.edu.in</li>
+        <li>Phone: 7845745795</li>
+        <li>Linkedin : <a href="#">Saichandan Gorli.</a></li>
+        <li>GitHub : <a href="#">Saichandan Gorli.</a></li>
+      </ul>
+    </div>
   </body>
 </html>
