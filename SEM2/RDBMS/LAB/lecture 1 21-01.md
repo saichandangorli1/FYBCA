@@ -61,3 +61,26 @@ create table item_order(itemno int references items(itemno),ono int references o
 
 create table store_item(sid int references stores(sid),itemno int references items(itemno),quantity int);
 ```
+
+- **_Data For Tables :_**
+
+```sql
+-- Cities
+INSERT INTO cities VALUES ('pune', 'mh'), ('mumbai', 'mh'), ('nagpur', 'mh');
+
+-- Warehouses
+INSERT INTO warehouses VALUES (1, 'spares', 'chinchwad', 'pune'), (2, 'electronics', 'andheri', 'mumbai'), (3, 'books', 'civil lines', 'nagpur');
+
+-- Stores
+INSERT INTO stores VALUES (101, 'spares pune', 'pune', 1), (102, 'spares mumbai', 'mumbai', 1), (201, 'electronic andheri', 'mumbai', 2), (301, 'book nagpur', 'nagpur', 3);
+
+-- Items
+INSERT INTO items VALUES (1, 'wheel', 5.2, 250.00), (2, 'wire', 1.0, 50.00); -- Add more items as needed
+
+-- Customers
+INSERT INTO customer VALUES (1, 'mr. joshi', '123 main st', 'pune'), (2, 'ms. patil', '456 park ave', 'mumbai'), (3, 'mr. sharma', '789 high st', 'pune');
+
+-- Orders
+INSERT INTO orders VALUES (1, '2013-10-03', 1), (2, '2013-10-03', 2), (3, '2013-10-05', 1), (4, '2013-10-03', 3);
+
+```
