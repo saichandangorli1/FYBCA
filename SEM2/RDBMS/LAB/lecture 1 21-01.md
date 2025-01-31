@@ -84,3 +84,23 @@ INSERT INTO customer VALUES (1, 'Mr. Joshi', '123 Main St', 'Pune'), (2, 'Ms. Pa
 INSERT INTO orders VALUES (1, '2013-10-03', 1), (2, '2013-10-03', 2), (3, '2013-10-05', 1), (4, '2013-10-03', 3);
 
 ```
+
+## question
+
+1. List the names of stores of ‘Spares’ warehouse, located at Pune.
+
+```sql
+ SELECT s.storename FROM stores s JOIN warehouses w ON s.wid = w.wid WHERE w.wname = 'Spares' AND w.city = 'Pune';
+```
+
+2. List the names of customers from Pune city, who have placed orders on 03-10-2013
+
+```sql
+ SELECT c.cname FROM customer c JOIN orders o ON c.cno = o.cno WHERE c.cu_city = 'Pune' AND o.odate = '2013-10-03';
+```
+
+3. List the orders placed by “Mr. Joshi”.
+
+```sql
+ select o.* from orders o inner join customer c on o.cno=c.cno where c.cname='Mr. Joshi';
+```
