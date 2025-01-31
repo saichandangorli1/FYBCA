@@ -1,4 +1,4 @@
-# Address Bus in Detail (8085 Microprocessor)
+# Address Bus in Details (8085 Microprocessor)
 
 This section provides a more in-depth look at the Address Bus of the 8085 microprocessor.
 
