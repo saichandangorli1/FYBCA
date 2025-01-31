@@ -1,4 +1,4 @@
-```sql
+<!-- ```sql
 CREATE TABLE cities (
     city CHAR(20),
     state CHAR(20)
@@ -35,15 +35,29 @@ CREATE TABLE orders (
     ono INT,
     odate DATE
 );
-```
+``` -->
 
 - **_In one line format :_**
 
 ```sql
-create table cities (city char(20), state char(20));
-create table warehouses (wid integer, wname char(30), location char(20));
-create table stores (sid integer, store_name char(20), location_city char(20), wid integer);
-create table items (itemno integer, description text, weight decimal(5,2), cost decimal(5,2));
-create table customer (cno integer, cname char(50), addr varchar(50), cu_city char(20));
-create table orders (ono int, odate date);
+create table cities(city char(20) primary key, state char(20));
+
+create table warehouses(wid int primary key, wname char(30), location char(50),city char(20) references cities(city));
+
+ create table stores (sid int primary key, storename char(20), location_city char(20), wid int references warehouses(wid));
+
+create table items (itemno int primary key, description text, weight decimal(5,2), cost decimal(5,2));
+
+create table customer(cno int primary key, cname char(50), addr varchar(50), cu_city char(20));
+
+create table orders(ono int primary key, odate date,cno int references customer(cno));
+```
+
+- **_Added Table :_**
+
+```sql
+
+create table item_order(itemno int references items(itemno),ono int references orders(ono),ordered_quantity int);
+
+create table store_item(sid int references stores(sid),itemno int references items(itemno),quantity int);
 ```
