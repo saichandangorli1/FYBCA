@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Feedback Form</title>
-</head>
-<body>
+  <head>
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <h2>Feedback Form</h2>
 
-<h2>Feedback Form</h2>
+    <form action="#" method="post">
+      <label for="yourname">Your Name:</label><br />
+      <input type="text" id="yourname" name="yourname" required /><br /><br />
 
-<form action="#" method="post">
-  <label for="yourname">Your Name:</label><br>
-  <input type="text" id="yourname" name="yourname" required><br><br>
+      <label for="youremail">Your Email:</label><br />
+      <input
+        type="email"
+        id="youremail"
+        name="youremail"
+        required
+      /><br /><br />
 
-  <label for="youremail">Your Email:</label><br>
-  <input type="email" id="youremail" name="youremail" required><br><br>
+      <label for="feedback">Your Feedback:</label><br />
+      <textarea
+        id="feedback"
+        name="feedback"
+        rows="4"
+        required
+        placeholder="Write your feedbakc here..."
+      ></textarea
+      ><br /><br />
 
-  <label for="feedback">Your Feedback:</label><br>
-  <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+      <label for="rating">Rate Our Service:</label><br />
+      <select id="rating" name="rating">
+        <option value="">-Select</option>
+        <option value="5">Excellent (5)</option>
+        <option value="4">Very Good (4)</option>
+        <option value="3">Good (3)</option>
+        <option value="2">Fair (2)</option>
+        <option value="1">Poor (1)</option></select
+      ><br /><br />
 
-  <label for="rating">Rate Our Service:</label><br>
-  <select id="rating" name="rating">
-    <option value="">-Select</option>
-    <option value="5">Excellent (5)</option>
-    <option value="4">Very Good (4)</option>
-    <option value="3">Good (3)</option>
-    <option value="2">Fair (2)</option>
-    <option value="1">Poor (1)</option>
-  </select><br><br>
-
-  <input type="submit" value="Submit Feedback">
-</form>
-
-</body>
+      <input type="submit" value="Submit Feedback" />
+    </form>
+  </body>
 </html>
