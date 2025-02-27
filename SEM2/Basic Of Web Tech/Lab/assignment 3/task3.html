@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table with Image, Styled Text, and Form</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<h2>Design a table with four rows and three columns where: one cell has an image (<img>), one cell has a bold and italic text, and one cell contains a form with input fields</h2>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Styled Text</th>
+    <th>Form</th>
+  </tr>
+  <tr>
+    <td><img src="your_image_url.jpg" alt="Example Image"></td>
+    <td><b><i>Bold and Italic Text</i></b></td>
+    <td>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Another Styled Text</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3" style="text-align: center;">Footer Row with Merged Columns</td>
+  </tr>
+</table>
+
+</body>
+</html>
