@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table with YouTube Video and Hyperlink</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  iframe {
+    width: 100%;
+    height: 315px; /* Adjust height as needed */
+  }
+</style>
+</head>
+<body>
+
+<h2>Create a table where one cell contains an iframe displaying a YouTube video, and another cell contains a hyperlink (<a>) that opens in a new tab.</h2>
+
+<table>
+  <tr>
+    <th>Embedded YouTube Video</th>
+    <th>Hyperlink</th>
+  </tr>
+  <tr>
+    <td>
+      <iframe src="https://www.youtube.com/embed/your_video_id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </td>
+    <td>
+      <a href="https://www.example.com" target="_blank">Visit Example Website</a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
