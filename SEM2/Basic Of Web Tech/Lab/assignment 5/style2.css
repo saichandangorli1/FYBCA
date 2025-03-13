@@ -1,5 +1,5 @@
 body {
-  background-image: url('university_logo.png'); /* Replace with your university logo */
+  background-image: url('./clg.'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -11,25 +11,25 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for header */
+  background-color: rgba(255, 255, 255, 0.8); 
 }
 
 .department-logo {
-  width: 150px; /* Adjust size as needed */
+  width: 150px; 
   margin-bottom: 10px;
 }
 
 .header h1 {
-  font-size: 2.5em; /* Large text */
+  font-size: 2.5em; 
   margin-bottom: 5px;
 }
 
 .header p {
-  font-size: 1em; /* Smaller text */
+  font-size: 1em; 
 }
 
 .courses {
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for courses */
+  background-color: rgba(255, 255, 255, 0.7); 
   padding: 20px;
   margin: 20px auto;
   width: 80%;
@@ -38,7 +38,7 @@ body {
 }
 
 .courses h2 {
-  color: #007bff; /* Example color */
+  color: #007bff;
   font-size: 1.8em;
   margin-bottom: 15px;
   text-align: center;
@@ -46,7 +46,7 @@ body {
 
 .courses ul {
   list-style-type: square;
-  color: #333; /* Example color */
+  color: #333;
   font-size: 1.1em;
   line-height: 1.6;
 }
