@@ -14,30 +14,30 @@ th {
 }
 
 .row1 {
-  background-color: #e0f7fa; /* Light cyan */
-  color: #006064; /* Dark cyan */
+  background-color: #e0f7fa; 
+  color: #006064; 
 }
 
 .row2 {
-  background-color: #fce4ec; /* Light pink */
-  color: #880e4f; /* Dark pink */
+  background-color: #fce4ec; 
+  color: #880e4f;
 }
 
 .row3 {
-  background-color: #e8f5e9; /* Light green */
-  color: #1b5e20; /* Dark green */
+  background-color: #e8f5e9; 
+  color: #1b5e20; 
 }
 
 .row4 {
-  background-color: #fff3e0; /* Light orange */
-  color: #e65100; /* Dark Orange */
+  background-color: #fff3e0; 
+  color: #e65100; 
 }
 
 .row5 {
-    background-color: #ede7f6; /* Light purple */
-    color: #311b92; /* Dark purple */
+    background-color: #ede7f6; 
+    color: #311b92; 
 }
 
 tr:nth-child(even) {
-  background-color: #f9f9f9; /* Subtle gray for even rows */
+  background-color: #f9f9f9; 
 }
