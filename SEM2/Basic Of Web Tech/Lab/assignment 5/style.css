@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.row1 {
+  background-color: #e0f7fa; /* Light cyan */
+  color: #006064; /* Dark cyan */
+}
+
+.row2 {
+  background-color: #fce4ec; /* Light pink */
+  color: #880e4f; /* Dark pink */
+}
+
+.row3 {
+  background-color: #e8f5e9; /* Light green */
+  color: #1b5e20; /* Dark green */
+}
+
+.row4 {
+  background-color: #fff3e0; /* Light orange */
+  color: #e65100; /* Dark Orange */
+}
+
+.row5 {
+    background-color: #ede7f6; /* Light purple */
+    color: #311b92; /* Dark purple */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Subtle gray for even rows */
+}
