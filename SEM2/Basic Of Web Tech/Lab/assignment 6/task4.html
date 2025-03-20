@@ -1,11 +1,52 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100vw;
+        height: 33.33vh;
+
+        border: 1px solid black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .first {
+        background-color: lightseagreen;
+        color: white;
+        font-size: 24px;
+      }
+      .second {
+        background-image: url("./images.png");
+        background-size: cover;
+        background-size: 400px;
+        color: black;
+        font-size: 24px;
+      }
+      .third {
+        background: linear-gradient(
+          to right,
+          rgb(255, 51, 0),
+          rgb(255, 102, 0)
+        );
+        color: white;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">solid background color</div>
+    <div class="second">background image</div>
+    <div class="third">Gradient background</div>
+  </body>
 </html>
