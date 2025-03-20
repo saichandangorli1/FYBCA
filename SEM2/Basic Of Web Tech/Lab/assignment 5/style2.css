@@ -1,5 +1,5 @@
 body {
-  background-image: url('./clg.'); 
+  background-image: url("./clg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -11,25 +11,25 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .department-logo {
-  width: 150px; 
+  width: 150px;
   margin-bottom: 10px;
 }
 
 .header h1 {
-  font-size: 2.5em; 
+  font-size: 2.5em;
   margin-bottom: 5px;
 }
 
 .header p {
-  font-size: 1em; 
+  font-size: 1em;
 }
 
 .courses {
-  background-color: rgba(255, 255, 255, 0.7); 
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   margin: 20px auto;
   width: 80%;
@@ -51,7 +51,6 @@ body {
   line-height: 1.6;
 }
 
-.courses ul li{
-    margin-bottom: 8px;
+.courses ul li {
+  margin-bottom: 8px;
 }
-
