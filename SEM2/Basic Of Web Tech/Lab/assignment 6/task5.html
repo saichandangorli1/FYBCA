@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Padding and Margin Layout</title>
-<style>
-.container {
-  width: 500px; /* Adjust as needed */
-  margin: 50px auto; /* Center the container */
-  border: 1px solid black; /* Optional border for visualization */
-  padding: 20px; /* Add padding to the container */
-}
+  <head>
+    <title>Padding and Margin Layout</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 80px;
+        font-size: 20px;
+        color: white;
+      }
 
-.box {
-  width: 150px; /* Adjust box width as needed */
-  height: 100px; /* Adjust box height as needed */
-  padding: 10px; /* Add padding inside each box */
-  margin-bottom: 20px; /* Add margin below each box */
-  text-align: center;
-  line-height: 80px; /* Vertically center text */
-  font-size: 20px;
-  color: white;
-}
+      .box1 {
+        background-color: #f08080;
+      }
 
-.box1 {
-  background-color: #f08080; /* Light Coral */
-}
+      .box2 {
+        background-color: #20b2aa;
+        margin-left: 50px;
+      }
 
-.box2 {
-  background-color: #20b2aa; /* Light Sea Green */
-  margin-left: 50px; /* Add left margin to create space */
-}
+      .box3 {
+        background-color: #050505;
 
-.box3 {
-  background-color: #fffacd; /* Lemon Chiffon */
-  margin-left: 100px; /* Add more left margin to create space */
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-  <div class="box box1">Box 1</div>
-  <div class="box box2">Box 2</div>
-  <div class="box box3">Box 3</div>
-</div>
-
-</body>
+        margin-top: -100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </body>
 </html>
