@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
       body {
         height: 100vh;
@@ -13,14 +14,25 @@
         justify-content: center;
         align-items: center;
       }
-      div {
-        width: 500px;
-        height: 500px;
-        background: conic-gradient(green, red, blue, yellow);
+      p {
+        font-size: 2rem;
+        color: yellow;
+        animation: changeColor 2s infinite;
+      }
+      @keyframes changeColor {
+        0% {
+          color: yellow;
+        }
+        50% {
+          color: green;
+        }
+        100% {
+          color: yellow;
+        }
       }
     </style>
   </head>
   <body>
-    <div></div>
+    <p>this is paragraph</p>
   </body>
 </html>
