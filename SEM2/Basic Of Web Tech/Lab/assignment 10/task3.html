@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const num1 = parseInt(prompt("enter first number : "));
+    const num2 = parseInt(prompt("enter second number : "));
+    const num3 = parseInt(prompt("enter third number : "));
+
+    if (((num1 > num2) && (num1 > num3))) {
+        alert(`maximum number is ${num1}`);
+    } else  if (((num2 > num1) && (num2 > num3))) {
+        alert(`maximum number is ${num2}`);
+    } else  if (((num3 > num1) && (num3 > num2))) {
+        alert(`maximum number is ${num3}`);
+    } 
+    else {
+        alert(`Enter valid input`);
+    }
+    
+
+  </script>
+</html>

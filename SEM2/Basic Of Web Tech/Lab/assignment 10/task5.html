@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+   
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Student Details</h2>
+        <div class="input-group">
+            <label>Student Name:</label>
+            <input type="text" id="studentName" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" id="male" required> Male
+            <input type="radio" name="gender" value="Female" id="female"> Female
+        </div>
+        
+        <div class="input-group">
+            <label>Course:</label>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Subject 1 Marks:</label>
+            <input type="number" id="sub1" min="0" max="100" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Subject 2 Marks:</label>
+            <input type="number" id="sub2" min="0" max="100" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Subject 3 Marks:</label>
+            <input type="number" id="sub3" min="0" max="100" required>
+        </div>
+        
+        <button onclick="calculateResult()">Submit</button>
+    </div>
+
+    <div class="result-container" id="result" style="display: none;">
+        <h2>Student Result</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+        <p><strong>Course:</strong> <span id="displayCourse"></span></p>
+        <p><strong>Subject 1 Marks:</strong> <span id="displaySub1"></span></p>
+        <p><strong>Subject 2 Marks:</strong> <span id="displaySub2"></span></p>
+        <p><strong>Subject 3 Marks:</strong> <span id="displaySub3"></span></p>
+        <p><strong>Total Marks:</strong> <span id="displayTotal"></span></p>
+        <p><strong>Percentage:</strong> <span id="displayPercentage"></span>%</p>
+    </div>
+
+    <script>
+        function calculateResult() {
+         
+            const name = document.getElementById('studentName').value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const course = document.getElementById('course').value;
+            const sub1 = parseFloat(document.getElementById('sub1').value);
+            const sub2 = parseFloat(document.getElementById('sub2').value);
+            const sub3 = parseFloat(document.getElementById('sub3').value);
+
+            if (!name || !gender || !course || isNaN(sub1) || isNaN(sub2) || isNaN(sub3)) {
+                alert('Please fill all fields correctly');
+                return;
+            }
+
+            if (sub1 < 0 || sub1 > 100 || sub2 < 0 || sub2 > 100 || sub3 < 0 || sub3 > 100) {
+                alert('Marks should be between 0 and 100');
+                return;
+            }
+
+          
+            const total = sub1 + sub2 + sub3;
+            const percentage = (total / 300) * 100;
+
+            
+            document.getElementById('displayName').textContent = name;
+            document.getElementById('displayGender').textContent = gender;
+            document.getElementById('displayCourse').textContent = course;
+            document.getElementById('displaySub1').textContent = sub1;
+            document.getElementById('displaySub2').textContent = sub2;
+            document.getElementById('displaySub3').textContent = sub3;
+            document.getElementById('displayTotal').textContent = total;
+            document.getElementById('displayPercentage').textContent = percentage.toFixed(2);
+
+           
+            document.getElementById('result').style.display = 'block';
+            
+           
+            document.getElementById('studentName').value = '';
+            document.querySelector('input[name="gender"]:checked').checked = false;
+            document.getElementById('course').value = '';
+            document.getElementById('sub1').value = '';
+            document.getElementById('sub2').value = '';
+            document.getElementById('sub3').value = '';
+        }
+    </script>
+</body>
+</html>
