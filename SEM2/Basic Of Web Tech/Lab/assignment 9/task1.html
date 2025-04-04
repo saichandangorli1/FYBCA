@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="AreaS" id="AreaS" placeholder="Enter Side" />
+    <input type="submit" name="btn" id="btn" value="Calculate" />
+    <p id="showResult">The Area of the square is 2</p>
+  </body>
+  <script>
+    const AreaS = document.getElementById("AreaS");
+    const btn = document.getElementById("btn");
+    const showResult = document.getElementById("showResult");
+
+    btn.addEventListener("click", () => {
+      const side = parseInt(AreaS.value);
+      const area = side * side;
+      showResult.innerHTML = `The Area of the circle is ${area}`;
+    });
+  </script>
+</html>
