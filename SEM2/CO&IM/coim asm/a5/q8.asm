@@ -8,27 +8,32 @@ main proc
     mov ds, ax
 
     
-    mov ax, 1A3Fh      
-    mov bx, 0B2Ch      
-    mov dx, ax         
+    mov ax, 45         
 
     
-    call display_hex   
-    mov bx, 0B2Ch      
+    mov bl, 10         
+    div bl             
 
     
-    mov dl, '-'
+    mov bh, al         
+    mov bl, ah         
+
+    
+    mov dl, bh
+    add dl, 30h        
+    mov ah, 02h        
+    int 21h
+
+    
+    mov dl, '+'
     mov ah, 02h
     int 21h
 
     
-    mov dl, ' '
+    mov dl, bl
+    add dl, 30h        
     mov ah, 02h
     int 21h
-
-    
-    mov ax, bx
-    call display_hex
 
     
     mov dl, '='
@@ -36,44 +41,31 @@ main proc
     int 21h
 
     
-    mov dl, ' '
-    mov ah, 02h
-    int 21h
+    mov al, bh         
+    mov ah, 0          
+    add al, bl         
+    mov bl, 10
+    div bl             
 
     
-    mov ax, dx         
-    sub ax, bx         
-    call display_hex
+    cmp al, 0
+    je skip_tens
+    add al, 30h        
+    mov dl, al
+    mov ah, 02h
+    int 21h
+skip_tens:
+
+    
+    mov al, ah         
+    add al, 30h        
+    mov dl, al
+    mov ah, 02h
+    int 21h
 
     
     mov ah, 4Ch
     int 21h
 
 main endp
-
-
-display_hex proc
-    push bx            
-    push cx
-    mov bx, ax         
-    mov cx, 4          
-
-hex_loop:
-    rol bx, 4          
-    mov dl, bl
-    and dl, 0Fh        
-    cmp dl, 9
-    jbe add_30h
-    add dl, 7h
-add_30h:
-    add dl, 30h        
-    mov ah, 02h
-    int 21h
-    loop hex_loop
-
-    pop cx             
-    pop bx
-    ret
-display_hex endp
-
 end main
