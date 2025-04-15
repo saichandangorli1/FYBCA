@@ -2,7 +2,7 @@
 
 This folder contains notes for all subjects in the FYBCA (First Year of Bachelor of Computer Applications) course.  Each subject's notes are organized within its own subfolder.
 
-*   **Subject Folders:** Each subject has its own dedicated folder (e.g., "Database Management System", "Programming in C").  The folder name clearly indicates the subject.
+*   **Subject Folders:** Each subject has its own dedicated folder (e.g., "Database Management System", "Programming in C","Basic of Web Technology").  The folder name clearly indicates the subject.
 *   **Unit Files:** Within each subject folder, notes are typically organized by unit or topic.
 
 ## How to Use These Notes
