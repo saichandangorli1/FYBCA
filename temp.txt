@@ -1,0 +1,213 @@
+Okay, here are the HTML files with JavaScript code implementing the logic for each question using very basic constructs, avoiding arrays and built-in JavaScript functions for string reversal or similar advanced features.
+1. factorial_basic.html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Factorial Calculator</title>
+</head>
+<body>
+
+  <h1>Basic Factorial Calculator</h1>
+
+  <label for="factorialNumber">Enter a number:</label>
+  <input type="number" id="factorialNumber">
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+  <p id="factorialResult"></p>
+
+  <script>
+    function factorialBasic(n) {
+      if (n === 0) {
+        return 1;
+      } else if (n < 0) {
+        return "Factorial is not defined for negative numbers.";
+      } else {
+        let result = 1;
+        let i = 2;
+        while (i <= n) {
+          result = result * i;
+          i = i + 1;
+        }
+        return result;
+      }
+    }
+
+    function calculateFactorial() {
+      const num = parseInt(document.getElementById("factorialNumber").value);
+      document.getElementById("factorialResult").textContent = "Factorial: " + factorialBasic(num);
+    }
+  </script>
+
+</body>
+</html>
+
+2. largest_digit_basic.html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Largest Digit Finder</title>
+</head>
+<body>
+
+  <h1>Basic Largest Digit Finder</h1>
+
+  <label for="largestDigitNumber">Enter a number:</label>
+  <input type="number" id="largestDigitNumber">
+  <button onclick="findLargest()">Find Largest Digit</button>
+  <p id="largestDigitResult"></p>
+
+  <script>
+    function findLargestDigitBasic(num) {
+      if (num === 0) {
+        return 0;
+      }
+      let largest = 0;
+      while (num > 0) {
+        let remainder = num % 10;
+        if (remainder > largest) {
+          largest = remainder;
+        }
+        num = Math.floor(num / 10);
+      }
+      return largest;
+    }
+
+    function findLargest() {
+      const num = parseInt(document.getElementById("largestDigitNumber").value);
+      document.getElementById("largestDigitResult").textContent = "Largest Digit: " + findLargestDigitBasic(num);
+    }
+  </script>
+
+</body>
+</html>
+
+3. palindrome_basic.html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Palindrome Checker</title>
+</head>
+<body>
+
+  <h1>Basic Palindrome Checker</h1>
+
+  <label for="palindromeNumber">Enter a number:</label>
+  <input type="number" id="palindromeNumber">
+  <button onclick="checkPalindrome()">Check Palindrome</button>
+  <p id="palindromeResult"></p>
+
+  <script>
+    function isPalindromeBasic(num) {
+      if (num < 0) {
+        return false;
+      }
+      let originalNumber = num;
+      let reversedNumber = 0;
+      while (num > 0) {
+        let remainder = num % 10;
+        reversedNumber = (reversedNumber * 10) + remainder;
+        num = Math.floor(num / 10);
+      }
+      return originalNumber === reversedNumber;
+    }
+
+    function checkPalindrome() {
+      const num = parseInt(document.getElementById("palindromeNumber").value);
+      document.getElementById("palindromeResult").textContent = "Is Palindrome? " + isPalindromeBasic(num);
+    }
+  </script>
+
+</body>
+</html>
+
+4. armstrong_basic.html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Armstrong Number Checker</title>
+</head>
+<body>
+
+  <h1>Basic Armstrong Number Checker (Three-Digit)</h1>
+
+  <label for="armstrongNumber">Enter a three-digit number:</label>
+  <input type="number" id="armstrongNumber">
+  <button onclick="checkArmstrong()">Check Armstrong</button>
+  <p id="armstrongResult"></p>
+
+  <script>
+    function isArmstrongBasic(num) {
+      if (num < 100 || num > 999) {
+        return "Please enter a three-digit number.";
+      }
+      let tempNumber = num;
+      let sum = 0;
+      while (tempNumber > 0) {
+        let digit = tempNumber % 10;
+        sum = sum + (digit * digit * digit);
+        tempNumber = Math.floor(tempNumber / 10);
+      }
+      return sum === num;
+    }
+
+    function checkArmstrong() {
+      const num = parseInt(document.getElementById("armstrongNumber").value);
+      document.getElementById("armstrongResult").textContent = "Is Armstrong? " + isArmstrongBasic(num);
+    }
+  </script>
+
+</body>
+</html>
+
+5. fibonacci_basic.html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Fibonacci Series Display</title>
+</head>
+<body>
+
+  <h1>Basic Fibonacci Series</h1>
+
+  <label for="fibonacciTerms">Enter the number of terms:</label>
+  <input type="number" id="fibonacciTerms">
+  <button onclick="displayFibonacci()">Display Fibonacci Series</button>
+  <p id="fibonacciResult"></p>
+
+  <script>
+    function fibonacciSeriesBasic(n) {
+      if (n <= 0) {
+        return "";
+      } else if (n === 1) {
+        return "0";
+      } else {
+        let a = 0;
+        let b = 1;
+        let series = "0, 1";
+        let count = 2;
+        while (count < n) {
+          let next = a + b;
+          series = series + ", " + next;
+          a = b;
+          b = next;
+          count = count + 1;
+        }
+        return series;
+      }
+    }
+
+    function displayFibonacci() {
+      const terms = parseInt(document.getElementById("fibonacciTerms").value);
+      document.getElementById("fibonacciResult").textContent = "Fibonacci Series: " + fibonacciSeriesBasic(terms);
+    }
+  </script>
+
+</body>
+</html>
+
+Key Changes in the Basic Logic:
+ * Factorial: Uses a while loop instead of a for loop for iteration.
+ * Largest Digit: Extracts digits using the modulo operator (%) and integer division (Math.floor()) within a while loop.
+ * Palindrome: Reverses the number using modulo and multiplication within a while loop, then compares it to the original.
+ * Armstrong: Extracts digits and calculates the sum of their cubes using modulo and integer division in a while loop.
+ * Fibonacci: Manually tracks the previous two numbers and builds the series string using concatenation within a while loop.
+These versions avoid the use of arrays and built-in functions like split(), reverse(), join(), etc., relying on more fundamental arithmetic and looping constructs.
