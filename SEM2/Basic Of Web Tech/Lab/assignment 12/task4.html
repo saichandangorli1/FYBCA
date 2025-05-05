@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Armstrong Number Checker</title>
+</head>
+<body>
+
+  <h1>Basic Armstrong Number Checker (Three-Digit)</h1>
+
+  <label for="armstrongNumber">Enter a three-digit number:</label>
+  <input type="number" id="armstrongNumber">
+  <button onclick="checkArmstrong()">Check Armstrong</button>
+  <p id="armstrongResult"></p>
+
+  <script>
+    function isArmstrongBasic(num) {
+      if (num < 100 || num > 999) {
+        return "Please enter a three-digit number.";
+      }
+      let tempNumber = num;
+      let sum = 0;
+      while (tempNumber > 0) {
+        let digit = tempNumber % 10;
+        sum = sum + (digit * digit * digit);
+        tempNumber = Math.floor(tempNumber / 10);
+      }
+      return sum === num;
+    }
+
+    function checkArmstrong() {
+      const num = parseInt(document.getElementById("armstrongNumber").value);
+      document.getElementById("armstrongResult").textContent = "Is Armstrong? " + isArmstrongBasic(num);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>2x3 Matrix Input with Prompt</title>
+    <style>
+        #output {
+            font-family: monospace;
+            white-space: pre;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="output"></div>
+
+    <script>
+      let row = ''
+for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < i; j++) {
+        row+=j+1;
+    }
+    row+= "\n"
+    
+}
+for (let i = 2; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+        row+=j+1;
+    }
+    row+= "\n"
+    
+}
+
+console.log(row);
+        document.getElementById("output").innerHTML =row;
+    </script>
+</body>
+
+</html>

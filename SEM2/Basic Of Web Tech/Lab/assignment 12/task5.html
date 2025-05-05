@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Fibonacci Series Display</title>
+</head>
+<body>
+
+  <h1>Basic Fibonacci Series</h1>
+
+  <label for="fibonacciTerms">Enter the number of terms:</label>
+  <input type="number" id="fibonacciTerms">
+  <button onclick="displayFibonacci()">Display Fibonacci Series</button>
+  <p id="fibonacciResult"></p>
+
+  <script>
+    function fibonacciSeriesBasic(n) {
+      if (n <= 0) {
+        return "";
+      } else if (n === 1) {
+        return "0";
+      } else {
+        let a = 0;
+        let b = 1;
+        let series = "0, 1";
+        let count = 2;
+        while (count < n) {
+          let next = a + b;
+          series = series + ", " + next;
+          a = b;
+          b = next;
+          count = count + 1;
+        }
+        return series;
+      }
+    }
+
+    function displayFibonacci() {
+      const terms = parseInt(document.getElementById("fibonacciTerms").value);
+      document.getElementById("fibonacciResult").textContent = "Fibonacci Series: " + fibonacciSeriesBasic(terms);
+    }
+  </script>
+
+</body>
+</html>

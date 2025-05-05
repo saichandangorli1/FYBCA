@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Largest Digit Finder</title>
+</head>
+<body>
+
+  <h1>Basic Largest Digit Finder</h1>
+
+  <label for="largestDigitNumber">Enter a number:</label>
+  <input type="number" id="largestDigitNumber">
+  <button onclick="findLargest()">Find Largest Digit</button>
+  <p id="largestDigitResult"></p>
+
+  <script>
+    function findLargestDigitBasic(num) {
+      if (num === 0) {
+        return 0;
+      }
+      let largest = 0;
+      while (num > 0) {
+        let remainder = num % 10;
+        if (remainder > largest) {
+          largest = remainder;
+        }
+        num = Math.floor(num / 10);
+      }
+      return largest;
+    }
+
+    function findLargest() {
+      const num = parseInt(document.getElementById("largestDigitNumber").value);
+      document.getElementById("largestDigitResult").textContent = "Largest Digit: " + findLargestDigitBasic(num);
+    }
+  </script>
+
+</body>
+</html>
