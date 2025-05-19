@@ -19,7 +19,7 @@ If you would like to contribute to these notes:
 2.  **Create a new branch:** Create a branch for your changes (e.g., `fix-typo` or `add-unit-3-notes`).
 3.  **Make your changes:** Edit the appropriate Markdown files.
 4.  **Submit a pull request:**  Submit your changes back to the main repository.
-5.  **If approved**, the pull request will be merged by the repo maintainer [@Satya-Siba-Nayak](https://github.com/Satya-Siba-Nayak)
+5.  **If approved**, the pull request will be merged by the repo maintainers [@Satya-Siba-Nayak](https://github.com/Satya-Siba-Nayak)
      or the repo owner [@saichandangorli1](https://github.com/saichandangorli1).
 
 ## Note on Formatting
