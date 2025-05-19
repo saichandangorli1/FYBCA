@@ -8,7 +8,7 @@ This folder contains notes for all subjects in the FYBCA (First Year of Bachelor
 ## How to Use These Notes
 
 1.  **Browse:** Navigate to the folder corresponding to the subject you're interested in.
-2.  **Read:** Open the Markdown files (.md) within the subject folder to access the notes for specific units or topics.  Markdown files can be easily viewed in any text editor or using a Markdown viewer.  Many code editors (VS Code, Sublime Text, Atom) have built-in Markdown preview.  You can also use online Markdown viewers
+2.  **Read:** Open the Markdown files (.md) within the subject folder to access the notes for specific units or topics.  Markdown files can be easily viewed in any text editor or using a Markdown viewer.  Many code editors (VS Code, Sublime Text, Atom) have built-in Markdown preview.  You can also use online Markdown viewers.
 3.  **Contribute :** If you find any errors or would like to add to the notes, you can contribute by following the contribution guidelines (see below).
 
 ## Contribution Guidelines  
