@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Month Name Program</title>
+    <script>
+      function getMonthName() {
+        // Get the number input from the user.
+        const monthNumber = parseInt(document.getElementById("monthInput").value);
+        let monthName = "";
+
+        // Determine the month name based on the number.
+        switch (monthNumber) {
+          case 1:
+            monthName = "January";
+            break;
+          case 2:
+            monthName = "February";
+            break;
+          case 3:
+            monthName = "March";
+            break;
+          case 4:
+            monthName = "April";
+            break;
+          case 5:
+            monthName = "May";
+            break;
+          case 6:
+            monthName = "June";
+            break;
+          case 7:
+            monthName = "July";
+            break;
+          case 8:
+            monthName = "August";
+            break;
+          case 9:
+            monthName = "September";
+            break;
+          case 10:
+            monthName = "October";
+            break;
+          case 11:
+            monthName = "November";
+            break;
+          case 12:
+            monthName = "December";
+            break;
+          default:
+            monthName = "Invalid month number";
+        }
+
+        // Display the result to the user.
+        document.getElementById("monthName").innerHTML = "Month Name: " + monthName;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="monthInput">Enter a number (1-12):</label>
+    <input type="text" id="monthInput" name="monthInput" />
+    <br />
+    <br />
+    <button onclick="getMonthName()">Get Month Name</button>
+    <br />
+    <br />
+    <p id="monthName"></p>
+  </body>
+</html>

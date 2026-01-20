@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>2x3 Matrix Input with Prompt</title>
+    <style>
+        #output {
+            font-family: monospace;
+            white-space: pre;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Enter values for a 2x3 matrix using prompt()</h2>
+    <button id="inputMatrixBtn">Input Matrix</button>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('inputMatrixBtn').addEventListener('click', function () {
+            let rows = 2;
+            let cols = 3;
+            let mewma = ''
+            let martrix = [];
+            for (let i = 0; i < rows; i++) {
+                martrix[i] = [];
+                for (let j = 0; j < cols; j++) {
+                    let num = parseInt(prompt(`enter [${i}] [${j}]th element`))
+                    martrix[i][j] = num;
+                    console.log( martrix[i][j]);
+                    mewma += martrix[i][j]
+                   
+                }
+                mewma+= "\n";
+            }
+            document.getElementById("output").innerHTML = mewma;
+
+
+        });
+    </script>
+</body>
+
+</html>

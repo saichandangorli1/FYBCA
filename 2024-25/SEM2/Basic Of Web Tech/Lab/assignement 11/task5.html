@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Selection Program</title>
+    <script>
+      function getOrder() {
+        // Display the menu options.
+        const menu = {
+          1: { name: "Pizza", price: 250 },
+          2: { name: "Burger", price: 100 },
+          3: { name: "Pasta", price: 150 },
+          4: { name: "Salad", price: 120 },
+          5: { name: "Sandwich", price: 80 },
+        };
+
+        // Get the user's choice.
+        const choice = parseInt(document.getElementById("choice").value);
+        let order = "";
+
+        // Determine the order based on the user's choice.
+        if (menu[choice]) {
+          order =
+            "Selected Item: " +
+            menu[choice].name +
+            ", Price: ₹" +
+            menu[choice].price;
+        } else {
+          order = "Invalid choice. Please select a number between 1 and 5.";
+        }
+
+        // Display the order to the user.
+        document.getElementById("order").innerHTML = order;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Menu:</h2>
+    <ol>
+      <li>Pizza - ₹250</li>
+      <li>Burger - ₹100</li>
+      <li>Pasta - ₹150</li>
+      <li>Salad - ₹120</li>
+      <li>Sandwich - ₹80</li>
+    </ol>
+    <label for="choice">Enter your choice (1-5):</label>
+    <input type="text" id="choice" name="choice" />
+    <br />
+    <br />
+    <button onclick="getOrder()">Get Order</button>
+    <br />
+    <br />
+    <p id="order"></p>
+  </body>
+</html>

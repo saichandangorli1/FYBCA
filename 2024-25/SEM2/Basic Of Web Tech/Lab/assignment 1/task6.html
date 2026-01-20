@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>[Your Name] - Digital Business Card</title>
+    <style>
+      * {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        padding-inline: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: purple;
+      }
+      body {
+        background-color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center content within the card */
+        width: 350px; /* Adjust width as needed */
+      }
+
+      .photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Make photo circular */
+        object-fit: cover; /* Maintain aspect ratio and cover the circle */
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        margin-bottom: 5px;
+      }
+
+      .contact-info {
+        margin-bottom: 15px;
+      }
+
+      .contact-info p {
+        margin: 5px 0; /* Add some spacing between contact details */
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center; /* Center the icons */
+      }
+
+      .social-links a {
+        margin: 0 10px; /* Space between icons */
+        display: inline-block; /* Make the links block elements for better clickability */
+      }
+
+      .social-links img {
+        width: 30px;
+        height: 30px;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 400px) {
+        .card {
+          width: 90%; /* Make card wider on smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Tbrands</h2>
+
+      <div class="contact-info">
+        <p>Email: <a href="mailto:tbrands.store.in">tbrands.store.in</a></p>
+        <p>Phone: 1807845522/23</p>
+        <p>Website: <a href="" target="_blank">tbrands.store.in</a></p>
+        <p>Location: Epitst,Neurit.</p>
+      </div>
+
+      <div class="social-links">
+        <a href="[your_linkedin_url]" target="_blank"
+          ><img src="product.avif" alt="LinkedIn"
+        /></a>
+        <a href="[your_github_url]" target="_blank"
+          ><img src="product.avif" alt="GitHub"
+        /></a>
+        <a href="[your_twitter_url]" target="_blank"
+          ><img src="product.avif" alt="Twitter"
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>

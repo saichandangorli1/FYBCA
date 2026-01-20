@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login System</title>
+    <script>
+      function login() {
+        // Hardcoded username and password
+        const correctUsername = "admin";
+        const correctPassword = "12345";
+
+        // Get the username and password input from the user.
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        let message = "";
+
+        // Check the credentials
+        if (username === correctUsername && password === correctPassword) {
+          message = "Login successful!";
+        } else if (username !== correctUsername) {
+          message = "Invalid username";
+        } else {
+          message = "Incorrect password";
+        }
+
+        // Display the result to the user.
+        document.getElementById("message").innerHTML = message;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" />
+    <br />
+    <br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" />
+    <br />
+    <br />
+    <button onclick="login()">Login</button>
+    <br />
+    <br />
+    <p id="message"></p>
+  </body>
+</html>

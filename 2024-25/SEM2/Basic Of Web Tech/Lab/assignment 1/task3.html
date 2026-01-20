@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>form</title>
+    <style>
+      * {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        padding-inline: 15px;
+      }
+      body {
+        background-color: #000000;
+        color: white;
+      }
+      h1 {
+        font-size: 6rem;
+        text-align: center;
+      }
+      label {
+        font-size: 2rem;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="file"],
+      textarea {
+        width: 100%;
+        display: block;
+        /* padding: 20px 10px; */
+        font-size: 2.5rem;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid white;
+        color: white;
+      }
+      input[type="radio"] {
+        transform: scale(1.5);
+        margin-right: 5px;
+      }
+      .div {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin: 20px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 3)Create a contact form that includes fields for name, email, message, password
+gender, country upload File and a submit button -->
+    <h1>Contact Form</h1>
+    <div class="div">
+      <input type="text" />
+      <label>Name </label>
+    </div>
+    <div class="div">
+      <input type="email" />
+      <label>Email </label>
+    </div>
+    <div class="div">
+      <textarea></textarea>
+      <label>message </label>
+    </div>
+    <div class="div">
+      <input type="password" />
+      <label>password </label>
+    </div>
+    <div>
+      <input type="radio" name="gender" id="" />
+      <label>Male</label>
+      <input type="radio" name="gender" id="" />
+      <label>Female</label>
+    </div>
+    <div class="div">
+      <input type="file" />
+      <label>upload here</label>
+    </div>
+  </body>
+</html>

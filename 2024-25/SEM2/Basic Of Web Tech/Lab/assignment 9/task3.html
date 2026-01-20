@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="chkEorO"
+      id="chkEorO"
+      placeholder="Enter a number"
+    />
+    <input type="submit" value="Check" id="btn" />
+    <p id="showResult"></p>
+  </body>
+  <script>
+    const number = document.getElementById("chkEorO");
+    const btn = document.getElementById("btn");
+    const showResult = document.getElementById("showResult");
+    btn.addEventListener("click", () => {
+      const value = parseInt(number.value);
+      if (value !== 0) {
+        if (value % 2 == 0) {
+          showResult.innerHTML = `The number ${value} is Even`;
+        } else {
+          showResult.innerHTML = `The number ${value} is Odd`;
+        }
+      } else {
+        showResult.innerHTML = `Enter valid number`;
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fruit Color Program</title>
+    <script>
+      function getFruitColor() {
+        // Get the fruit name input from the user.
+        const fruitName = document
+          .getElementById("fruitInput")
+          .value.toLowerCase();
+        let fruitColor = "";
+
+        // Determine the color of the fruit.
+        switch (fruitName) {
+          case "apple":
+            fruitColor = "Red";
+            break;
+          case "banana":
+            fruitColor = "Yellow";
+            break;
+          case "grapes":
+            fruitColor = "Green";
+            break;
+          case "orange":
+            fruitColor = "Orange";
+            break;
+          case "mango":
+            fruitColor = "Yellow";
+            break;
+          default:
+            fruitColor = "Unknown fruit or color";
+        }
+
+        // Display the result to the user.
+        document.getElementById("fruitColor").innerHTML =
+          "Color of " + fruitName + " is " + fruitColor + ".";
+      }
+    </script>
+  </head>
+  <body>
+    <label for="fruitInput">Enter a fruit name:</label>
+    <input type="text" id="fruitInput" name="fruitInput" />
+    <br />
+    <br />
+    <button onclick="getFruitColor()">Get Fruit Color</button>
+    <br />
+    <br />
+    <p id="fruitColor"></p>
+  </body>
+</html>

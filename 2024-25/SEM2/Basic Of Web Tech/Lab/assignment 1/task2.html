@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Event Invitation</title>
+    <style> 
+      * {
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        font-style: normal;
+        padding-inline: 15px;
+      }
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+      }
+      .event-details {
+        margin-bottom: 20px;
+      }
+      .map {
+        height: 400px; /* Adjust as needed */
+        width: 100%;
+        /* You'll need to integrate a map service here, like Google Maps */
+        background-color: #eee; /* Placeholder */
+        text-align: center;
+        line-height: 400px; /* Vertically center placeholder text */
+      }
+      .rsvp-form {
+        margin-top: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        outline: none;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>You're Invited!</h1>
+
+    <div class="event-details">
+      <h2>CCA1</h2>
+      <p><strong>Date:</strong> 31-01-2025</p>
+      <p><strong>Time:</strong> 11:00am</p>
+      <p><strong>Location:</strong>MITWPU School of Computer Science</p>
+    </div>
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe
+          class="gmap_iframe"
+          width="100%"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=MITWPU School of Computer Science&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        ></iframe
+        ><a href="https://sprunkiplay.com">Sprunki</a>
+      </div>
+      <style>
+        .mapouter {
+          position: relative;
+          text-align: right;
+          width: 100%;
+          height: 400px;
+        }
+        .gmap_canvas {
+          overflow: hidden;
+          background: none !important;
+          width: 100%;
+          height: 400px;
+        }
+        .gmap_iframe {
+          height: 400px !important;
+        }
+      </style>
+    </div>
+
+    <div class="rsvp-form">
+      <h2>RSVP</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="attending">Will you be attending?</label>
+        <select id="attending" name="attending">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </div>
+  </body>
+</html>
